@@ -1,0 +1,14 @@
+#textarea {
+  overflow: auto;
+  border-bottom: 3px solid;
+  width: 100%;
+}
+.t-btn{
+  font-family: Bungee;
+  display: flex;
+  justify-content: space-between;
+}
+.t-btn button {
+  background-color: #4152A1;
+  color: #FFFFFF;
+}

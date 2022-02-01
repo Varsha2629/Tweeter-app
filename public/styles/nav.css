@@ -1,0 +1,32 @@
+nav{
+  height: 120px;
+  width:100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.logo{
+  font-family: 'Bungee';
+  margin-left: 1.5em;
+  margin-top: 40px;
+}
+
+.sub-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-top: 0.7em;
+}
+
+.fa-angle-double-down{  
+   color: red;
+}
+
+.back-to-top {
+  float: right;
+  margin: 15px;
+}
