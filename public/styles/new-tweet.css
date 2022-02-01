@@ -2,7 +2,27 @@
   overflow: auto;
   border-bottom: 3px solid;
   width: 100%;
+  
 }
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+.new-tweet label {
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+
+textarea#tweet-text {
+  border: none;
+  background-color: inherit;
+  font-weight: 600;
+  font-size: 0.7em;
+  height: 2em;
+  border-bottom: 4px solid #787373;
+  margin-bottom: 0.8em;
+}
+
 .t-btn{
   font-family: Bungee;
   display: flex;
