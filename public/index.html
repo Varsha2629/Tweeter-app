@@ -23,7 +23,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -34,16 +36,14 @@
   <nav>
     <span class="logo">Tweeter</span>
     <div class="sub-title">
-      <span><strong>Write</strong> a new tweet</span>
+      <span><strong>Write</strong>a new tweet</span>
       <i class="fas fa-angle-double-down"></i>
     </div>
   </nav>
   <header>
-
     <div>
-      <img src="/images/profile-hex.png">
+      <img src="/images/profile-hex.png" />
     </div>
-    <br>
     <div>
       <h2>Varsha</h2>
     </div>
@@ -58,17 +58,41 @@
       <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">
         <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" value= "" id="tweet-text"></textarea>
+        <textarea name="text" value="" id="tweet-text"></textarea>
         <div class="t-btn">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+
+      <div id="tweets-container">
+        <!-- <article>
+          <div class="tweet-header">
+            <img src="./images/profile-hex.png" />
+            <p>Rhoda Jacobs</p>
+            <div class="user">@MrsJacbs</div>
+          </div>
+          <p id="tweet">Hello world!</p>
+          <footer>
+            <div class="timeago" datetime="2016-06-30 09:20:00"></div>
+            <div class="icons">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </footer>
+
+        </article> -->
+
+       
+      </div>
     </section>
+
+
+    <!-- <button class="back-to-top">
+      <i class="fas fa-angle-double-up"></i>
+    </button> -->
   </main>
-
-
-  <a href="#" class="back-to-top"><i class="fas fa-angle-double-up"></i></a>
 </body>
 
 </html>

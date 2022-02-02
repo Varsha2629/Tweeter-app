@@ -5,6 +5,9 @@ nav{
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1;
   
 }
 .logo{
@@ -20,6 +23,7 @@ nav{
   margin-left: 1.5em;
   margin-right: 1.5em;
   margin-top: 0.7em;
+  /* margin: 0.7em 1.5em 1.5; */
 }
 
 .fa-angle-double-down{  
@@ -29,4 +33,14 @@ nav{
 .back-to-top {
   float: right;
   margin: 15px;
+  width: 5%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: #4152A1;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: white;
+  border: none;
 }
