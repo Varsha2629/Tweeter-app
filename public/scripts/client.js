@@ -5,46 +5,22 @@
  */
 // Test / driver code (temporary). Eventually will get this from the server.
 // Fake data taken from initial-tweets.json
-$(document).ready(function() {
-const tweetData  = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+$(() => {
 
-const renderTweets = function (tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-  
-  for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+  const renderTweets = function (tweets) {
+    $('#tweets-container').empty();
+    // loops through tweets
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+    
+    for (let tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').prepend($tweet);
+    }
   }
-}
 
-const createTweetElement = function(data) {
-  const $tweet = $(`
+  const createTweetElement = function (data) {
+    const $tweet = $(`
     <article>
     <div class="tweet-header">
       <img src=${data.user.avatars} />
@@ -63,15 +39,42 @@ const createTweetElement = function(data) {
 
   </article>
 
-  `)/* Your code for creating the tweet element */
-  // ...
-  return $tweet;
-}
+  `)
+    return $tweet;
+  }
 
-renderTweets(tweetData);
 
-$("form").submit(function(event) {
-  alert("Handler for .submit() called.");
-  event.preventDefault();
-})
+  $("form").on('submit', (event) => {
+    // create an AJAX POST request in client.js that sends the form data to the server.
+    event.preventDefault();
+
+    const charCount = Number($('.counter').val())
+    if(charCount === 140){
+      alert('Please enter the text!!');
+    } else if(charCount < 0) {
+      alert('Oops too many character! \n  tweet accept only 140 char');
+    } else {
+      const param = $('#form').serialize();
+      const url = $('#form').attr('action');
+
+      $.post(url, param,
+        function (data) {
+          $('#tweet-text').val('');
+          $('.counter').text(140);
+          // tweetData.push(data);
+          loadTweets();
+        });
+    }
+  })
+  // get(fetch) the data from the server using ajax
+  const loadTweets = function () {
+    $.ajax('/tweets', { method: 'GET' })
+      .then(function (data) {
+        renderTweets(data)
+      })
+  }
+
+  loadTweets()
+
+
 });
