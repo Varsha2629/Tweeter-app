@@ -5,6 +5,13 @@
  */
 // Test / driver code (temporary). Eventually will get this from the server.
 // Fake data taken from initial-tweets.json
+const esc = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+// const safeHTML = `<p>${escape(textFromUser)}</p>`;
+
 $(() => {
 
   const renderTweets = function (tweets) {
@@ -27,7 +34,7 @@ $(() => {
       <p>${data.user.name}</p>
       <div class="user">${data.user.handle}</div>
     </div>
-    <p id="tweet">${data.content.text}</p>
+    <p id="tweet">${esc(data.content.text)}</p>
     <footer>
       <span>${timeago.format(data.created_at)}</span>
       <div class="icons">
