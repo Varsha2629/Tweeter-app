@@ -5,7 +5,7 @@ Tweeter is a simple, single-page Twitter clone.
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
 ## Screenshots
-  !["Screenshort of tweet]()
+  !["Screenshort of tweet](https://github.com/Varsha2629/Tweeter-app/blob/master/docs/desktop-view.png)
    !["Screenshort of tweets](https://github.com/Varsha2629/Tweeter-app/blob/master/docs/scrolling-page.png)
    !["Screenshort of tweets](https://github.com/Varsha2629/Tweeter-app/blob/master/docs/error-msg-page.png)
 
