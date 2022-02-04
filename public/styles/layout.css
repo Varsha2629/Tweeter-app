@@ -31,3 +31,16 @@ body {
    background-color: #f4f1ec;
    margin: 0% auto;
  }
+
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    margin-top: 80px;
+  }
+  .container {
+    margin: 8% 3% 5% 0;
+   }
+  
+ }
+ 

@@ -28,6 +28,7 @@ nav{
 
 .fa-angle-double-down{  
    color: red;
+   cursor: pointer;
 }
 
 .back-to-top {
@@ -44,3 +45,18 @@ nav{
   color: white;
   border: none;
 }
+
+.animation {
+  animation-name: arrowdown;
+  animation-duration: 1s;
+}
+
+@keyframes arrowdown {
+  from {
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+

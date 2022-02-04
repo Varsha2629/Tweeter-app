@@ -28,9 +28,9 @@ const backTopUpBtn = () => {
   }
 };
 
-
-
 $(() => {
+
+
   // hide back to top button at initial render
   $(".back-to-top").hide();
 
@@ -45,7 +45,9 @@ $(() => {
 
   });
 
-  const renderTweets = function (tweets) {
+
+
+  const renderTweets = function(tweets) {
     $('#tweets-container').empty();
     // loops through tweets
     // calls createTweetElement for each tweet
@@ -57,7 +59,7 @@ $(() => {
     }
   }
 
-  const createTweetElement = function (data) {
+  const createTweetElement = function(data) {
     const $tweet = $(`
     <article>
     <div class="tweet-header">
@@ -104,22 +106,26 @@ $(() => {
         function (data) {
           $('#tweet-text').val('');
           $('.counter').text(140);
-          // tweetData.push(data);
+
           loadTweets();
         });
     }
   });
   // get(fetch) the data from the server using ajax
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
-      .then(function (data) {
-        renderTweets(data)
+      .then(data => {
+        renderTweets(data);
       })
   }
 
   loadTweets()
 
-  //error message
-
+  const downarr = () => {
+    $("#downarrow").on("click", () => {
+      $('#tweet-text').focus();
+    })
+  }
+  downarr()
 
 });
