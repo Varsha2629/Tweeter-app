@@ -7,7 +7,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots
   !["Screenshort of tweet](https://github.com/Varsha2629/Tweeter-app/blob/master/docs/desktop-view.png)
    !["Screenshort of tweets](https://github.com/Varsha2629/Tweeter-app/blob/master/docs/scrolling-page.png)
-   !["Screenshort of tweets](https://github.com/Varsha2629/Tweeter-app/blob/master/docs/error-msg-page.png)
+ !["Screenshort of tweets](https://github.com/Varsha2629/Tweeter-app/blob/master/docs/error-msg-page.png)
 
 ## Getting Started
 
