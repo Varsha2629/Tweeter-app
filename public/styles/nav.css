@@ -34,8 +34,8 @@ nav{
 .back-to-top {
   float: right;
   margin: 15px;
-  width: 5%;
-  height: 10%;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: red;
   position: fixed;
